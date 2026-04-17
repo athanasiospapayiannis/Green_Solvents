@@ -214,7 +214,7 @@ Combined visualization of diffusion, activation energy, and thermal response hig
 
 ### Rank Consistency Analysis
 
-![Rank Consistency](plots/09_Ranking_consistency.png)
+![Rank Consistency](plots/09_Ranking_Consistency.png)
 ### Rank Consistency Table
 
 | Solvent                  | Diffusion Rank | Thermal Rank | Barrier Rank | Consistency Score |
