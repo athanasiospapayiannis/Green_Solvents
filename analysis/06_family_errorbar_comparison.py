@@ -4,17 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-# =========================
-# PATHS
-# =========================
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DB_PATH = PROJECT_ROOT / "database" / "solventsdb.sqlite"
-PLOTS_PATH = PROJECT_ROOT / "plots"
+#paths
+project_root = Path(__file__).resolve().parents[1]
+db_path = project_root / "database" / "solventsdb.sqlite"
+sql_path = project_root / "sql_queries"
+analysis_path = project_root / "analysis"
+plot_path = project_root / "plots"
 
-# =========================
-# DATABASE
-# =========================
-conn = sqlite3.connect(DB_PATH)
+conn = sqlite3.connect(db_path)
+cur = conn.cursor()
 
 query = """
 SELECT s.name,
@@ -82,7 +80,7 @@ axes[1].tick_params(axis="x", rotation=45)
 
 plt.tight_layout()
 
-plot_file = PLOTS_PATH / "11_family_errorbar_comparison.png"
+plot_file = plot_path / "11_family_errorbar_comparison.png"
 plt.savefig(plot_file, dpi=300)
 
 plt.show()

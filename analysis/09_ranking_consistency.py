@@ -1,6 +1,7 @@
 from pathlib import Path
 import sqlite3
 import pandas as pd
+import matplotlib.pyplot as plt
 
 #paths
 project_root = Path(__file__).resolve().parents[1]
@@ -51,5 +52,19 @@ print(df[[
     "rank_barrier",
     "consistency_score"
 ]])
+
+# plot
+plt.figure(figsize=(8,5))
+plt.barh(df["name"], df["consistency_score"])
+
+plt.xlabel("Consistency Score (lower is better)")
+plt.title("Multi-Criteria Solvent Ranking")
+plt.gca().invert_yaxis()
+
+plt.tight_layout()
+
+
+plt.show()
+
 
 conn.close()

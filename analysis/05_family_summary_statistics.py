@@ -2,16 +2,15 @@ from pathlib import Path
 import sqlite3
 import pandas as pd
 
-# =========================
-# PATHS
-# =========================
-PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DB_PATH = PROJECT_ROOT / "database" / "solventsdb.sqlite"
+#paths
+project_root = Path(__file__).resolve().parents[1]
+db_path = project_root / "database" / "solventsdb.sqlite"
+sql_path = project_root / "sql_queries"
+analysis_path = project_root / "analysis"
+plot_path = project_root / "plots"
 
-# =========================
-# DATABASE
-# =========================
-conn = sqlite3.connect(DB_PATH)
+conn = sqlite3.connect(db_path)
+cur = conn.cursor()
 
 query = """
 SELECT s.name,
