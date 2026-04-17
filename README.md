@@ -254,8 +254,11 @@ Multi-criteria ranking identifies 2-Methyltetrahydrofuran as the most balanced s
 ## Project Status
 
 ✔ Methodology validated
+
 ✔ Diffusion coefficients computed
+
 ✔ Temperature dependence analyzed
+
 ✔ Scientific workflow established
 
 ---
@@ -268,5 +271,7 @@ The full diploma thesis (in Greek) is available in the `docs/` folder.
 ## Author
 
 Athanasios Papagiannis
+
 Department of Materials Science and Engineering
+
 University of Ioannina
